@@ -1,0 +1,171 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F0F0F0;
+            margin: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 120px; /* This will create a space between the header and the container */
+        }
+
+        .card {
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            margin: 64px;
+            padding: 16px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+	.card img {
+    	    width: 90%;
+    	    height: auto;
+    	    display: block;
+    	    margin: auto;
+	}
+
+
+        .card h2 {
+            color: #0099CC;
+    	    display: block;
+        }
+
+        .card p {
+            color: #666666;
+	    padding-left: 65;
+	    padding-right: 30;
+        }
+
+        .card a {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #0099CC;
+            color: white;
+            text-decoration: none;
+	    margin-left: 65;
+        }
+
+        .header {
+            background-color: #C30101;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            position: fixed; /* This will make the header stick to the top */
+            width: 100%; /* This will make the header span the whole width of the page */
+            z-index: 1; /* This will make the header appear on top of the card */
+            top: 0; /* This will make the header align with the top edge of the page */
+        }
+
+        .header img {
+            width: 64px;
+            height: 64px;
+        }
+
+        .header ul {
+            list-style-type: none;
+            margin-left: auto;
+            padding: 0;
+            overflow: hidden;
+            margin-right: 24px; /* This will create a gap between the header buttons and the right edge of the page */
+        }
+
+        .header li {
+            float: left;
+        }
+
+        .header li a {
+            display: block;
+            padding: 8px 16px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .header li a:hover {
+            background-color: #940000;
+        }
+
+        .footer {
+            background-color: #333333;
+            padding: 16px;
+   	    text-align: center;
+        }
+
+        .footer p {
+            color: white;
+        }
+
+        .background-image {
+            position: fixed;
+            left: 0;
+            right: 0;
+            z-index: -1;
+
+            
+             /* Preserve aspect ratio */
+             min-width: 100%;
+             min-height: 100%;
+             filter: blur(8px);
+             -webkit-filter: blur(8px);
+
+	}
+
+	hide {
+	    display: none;
+	}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+    </style>
+
+<title>Home</title>
+<link rel="icon" type="image/x-icon" href="logo.png">
+
+</head>
+<body>
+    <img src="background.png" alt="Turkey" class="background-image">
+    <div class="header">
+        <img src="logo.png" alt="Logo">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="card">
+	    <h2 style="padding-left:70px; padding-bottom: 10px;">Welcome to Turkish with Ozlem</h2>
+            <img src="ozlem.jpeg" alt="Ozlem">
+            <p>Ozlem is a native Turkish speaker and a certified language teacher, who lives in the United Kingdom. She has taught Turkish since 2007 to adult learners of all levels, along with GCSE and A-level students. She also teaches English and has done so since the year 2000.<br><br>Ozlem has a clear accent from growing up in Ankara, the capital of Turkey. She uses a communicative and interactive approach to help her students learn Turkish in a fun and effective way.</p>
+            <a href="contact.html">Start Learning with Ozlem</a>
+            <hide><a href="logsign.html">Book a One-Off Lesson</a></hide>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2023 TurkishWithOzlem.com | All rights reserved.</p>
+    </div>
+    <script>
+       // You can add some Javascript code here to make your website more dynamic and interactive
+       // For example, you can add some animations for the header buttons when they are clicked
+       // You can use the jQuery library to make it easier
+
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+       <script>
+           $(".header li a").click(function() {
+               $(this).animate({width: "120px", height: "40px", backgroundColor: "#FF0000"}, 500);
+               $(this).delay(1000);
+               $(this).queue(function() {
+                   $(this).animate({width: "80px", height: "32px", backgroundColor: "#0099CC"}, 500);
+                   $(this).dequeue();
+               });
+           });
+       </script>
+    </script>
+</body>
+</html>
