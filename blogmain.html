@@ -1,0 +1,151 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F0F0F0;
+            margin: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 120px; /* This will create a space between the header and the container */
+        }
+
+        .blog {
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            margin: 16px;
+            padding: 16px;
+        }
+
+        .blog h2 {
+            color: #0099CC;
+        }
+
+        .blog ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .blog li {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+        }
+
+        .blog li img {
+            width: 120px;
+            height: 80px;
+        }
+
+        .blog li a {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            color: #333333;
+            text-decoration: none;
+        }
+
+        .blog li a p {
+            margin-left: 16px;
+        }
+
+        .blog li a:hover {
+            color: #C30101;
+        }
+
+        .header {
+            background-color: #C30101;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            position: fixed; /* This will make the header stick to the top */
+            width: 100%; /* This will make the header span the whole width of the page */
+            z-index: 1; /* This will make the header appear on top of the card */
+            top: 0; /* This will make the header align with the top edge of the page */
+        }
+
+        .header img {
+            width: 64px;
+            height: 64px;
+        }
+
+        .header ul {
+            list-style-type: none;
+            margin-left: auto;
+            padding: 0;
+            overflow: hidden;
+            margin-right: 24px; /* This will create a gap between the header buttons and the right edge of the page */
+        }
+
+        .header li {
+            float: left;
+        }
+
+        .header li a {
+            display: block;
+            padding: 8px 16px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .header li a:hover {
+            background-color: #940000;
+        }
+
+        .footer {
+   	    left: 0;
+   	    bottom: 0;
+	    position: fixed;
+	    width: 100%;
+   	    background-color: #333333;
+   	    color: white;
+   	    text-align: center;
+            padding: 16px;
+        }
+
+        .footer p {
+            color: white;
+        }
+
+    </style>
+
+<title>Blog</title>
+<link rel="icon" type="image/x-icon" href="logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+    <div class="header">
+        <img src="logo.png" alt="Logo">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+	  <li><a href="blogmain.html">Blog</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="blog" style="text-align: center;">
+            <img src="blog-banner.png" alt="Blog banner" style="width: 100%;">
+            <h2>Latest Articles</h2>
+            <ul>
+                <li>
+                    <a href="articles/bestplacestovisit2024.html">
+                        <img src="article_images/article1.png" alt="Article 1">
+                        <p>Best Places To Visit In Turkey (2024)</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2023 TurkishWithOzlem.com | All rights reserved.</p>
+    </div>
+    </body>
+    </html>
